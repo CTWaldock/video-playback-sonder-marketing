@@ -1,0 +1,29 @@
+<video src="video_1.ogv" id="myVideo1">
+  video not supported
+</video>
+
+<video src="video_2.ogv" id="myVideo2">
+  video not supported
+</video>
+
+<video src="video_3.ogv" id="myVideo3">
+  video not supported
+</video>
+
+
+<script type='text/javascript'>
+    // var videos = [ video_1.ogv, video_2.ogv, video_3.ogv]
+
+    //gets video and listens for ending
+    document.getElementById('myVideo1').addEventListener('ended',myHandler,false);
+    function myHandler(e) {
+      //gets second video and plays it
+      document.getElementById('myVideo2').play().addEventListener('ended',myHandler,false);
+      function myHandler(e) {
+        //gets second video and plays it
+        document.getElementById('myVideo3').play().addEventListener('ended',myHandler,false);
+        function myHandler(e) {
+        }
+      }
+    }
+</script>
